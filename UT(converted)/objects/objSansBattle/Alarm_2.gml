@@ -1,1 +1,1 @@
-dodge = 2
+animDodge = 2

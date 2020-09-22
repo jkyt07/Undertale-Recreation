@@ -24,6 +24,12 @@ if friskHp = 0 or !alive
 	menuOption = -1
 	yourTurn = true
 	onMenu = false
+	
+	for(var i = 0; i < ds_list_size(enemy.attacks); i++)
+	{
+		instance_destroy(ds_list_find_value(enemy.attacks, i))	
+	}
+	
 	if drawSplit != -2
 	{
 		if drawSplit = -1

@@ -74,6 +74,7 @@
     {"id":{"name":"sprHeartBreak","path":"sprites/sprHeartBreak/sprHeartBreak.yy",},"order":17,},
     {"id":{"name":"sprHeartShard","path":"sprites/sprHeartShard/sprHeartShard.yy",},"order":18,},
     {"id":{"name":"sprMissHit","path":"sprites/sprMissHit/sprMissHit.yy",},"order":19,},
+    {"id":{"name":"sprSansGastBlastAtt","path":"sprites/sprSansGastBlastAtt/sprSansGastBlastAtt.yy",},"order":6,},
     {"id":{"name":"sprBell","path":"sprites/sprBell/sprBell.yy",},"order":20,},
     {"id":{"name":"sprShroom","path":"sprites/sprShroom/sprShroom.yy",},"order":21,},
     {"id":{"name":"sprSign","path":"sprites/sprSign/sprSign.yy",},"order":22,},

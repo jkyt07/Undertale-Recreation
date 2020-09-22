@@ -18,7 +18,7 @@ att = 1
 shownHp = hp
 maxHp = hp
 
-dodge = 0
+animDodge = 0
 startPos = x
 
 animated = true

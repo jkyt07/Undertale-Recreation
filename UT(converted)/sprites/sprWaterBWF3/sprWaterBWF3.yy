@@ -79,6 +79,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0cc4be6b-04ac-4ed3-9b20-7fdf1d489c19","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Waterfall Waterfall",
     "path": "folders/Sprites/Waterfall Waterfall.yy",

@@ -1,12 +1,13 @@
 function startEnemyTurn() {
-	if enemy.alarm[0] <= 0
+		show_debug_message("Starting attack " + string(self.object_index) + " " + string(objHeart.object_index))
+	with(objHeart)
 	{
-		yourTurn = false
-		x = 880
-		y = 735
-		enemy.startAtt = true
+		if enemy.alarm[0] <= 0
+		{
+			yourTurn = false
+			x = 880
+			y = 735
+			enemy.startAtt = true
+		}
 	}
-
-
-
 }

@@ -36,6 +36,8 @@ else if !fightStart
 	}
 	else if !openText
 	{
+		moveHoriz *= keyboard_check(vk_lshift) * .5 + 1
+		moveVert *= keyboard_check(vk_lshift) * .5 + 1
 		if moveHoriz !=0
 		{
 			image_speed = abs(moveHoriz)
@@ -96,6 +98,7 @@ else if !fightStart
 	{
 		if openBox
 		{
+			audio_play_sound(snd_select, 2, 0)
 			if boxSelected = -1 //nothing selected
 			{
 				boxSelected = boxSelection
@@ -172,16 +175,19 @@ else if !fightStart
 			{
 				inter = instance_place(x,y+1,objInteractable)
 				inter.interact = true
+				audio_play_sound(snd_select, 2, 0)
 			}
 			else if sprite_index = sprFUp and !place_empty(x,y-1,objInteractable)
 			{
 				inter = instance_place(x,y-1,objInteractable)
 				inter.interact = true
+				audio_play_sound(snd_select, 2, 0)
 			}
 			else if sprite_index = sprFLR and !place_empty(x+image_xscale/imageScale*-1,y,objInteractable)
 			{
 				inter = instance_place(x+image_xscale/imageScale*-1,y,objInteractable)
 				inter.interact = true
+				audio_play_sound(snd_select, 2, 0)
 			}
 		}
 		else
@@ -208,6 +214,18 @@ else if !fightStart
 			boxSelection = 0
 			boxTemp[0] = 0
 		}
+		else if openText
+		{
+			if !inter.hasChoice or textNum < array_length_1d(text) - 1
+			{
+				textNum++
+				textCur = 0
+			}
+			else
+			{
+				textCur = 69420	
+			}
+		}
 	}
 
 	if openText
@@ -230,6 +248,10 @@ else if !fightStart
 		else if interactSelection >= 0
 		{
 			interactSelection = clamp(interactSelection + moveHorizPressed, 0, 1)
+			if moveHorizPressed != 0
+			{
+				audio_play_sound(snd_select, 2, 0)	
+			}
 			
 			if keyboard_check_pressed(vk_space) or keyboard_check_pressed(ord("Z"))
 			{
@@ -239,6 +261,7 @@ else if !fightStart
 				text = 0
 				textNum = 0
 				textCur = 0
+				audio_play_sound(snd_select, 2, 0)
 			}
 		}
 	}

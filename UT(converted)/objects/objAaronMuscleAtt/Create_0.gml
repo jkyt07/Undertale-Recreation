@@ -1,10 +1,6 @@
-imageScale = 3
-image_xscale = imageScale
-image_yscale = imageScale
+event_inherited()
 
-dmg = 1 * objAaron.att
+dmg = 1 * objHeart.enemy.att
 
 direction = 90
 speed = 3
-
-destroyOnContact = false

@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_Determination",
-  "duration": 50.5258179,
+  "duration": 50.5208168,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

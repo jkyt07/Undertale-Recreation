@@ -18,4 +18,10 @@ if use and !used //keyboard_check_pressed(vk_space) or keyboard_check_pressed(or
 		show_debug_message("Delete attack " + string(ds_list_find_value(objHeart.attacks, 0)))
 	//ds_list_delete(objHeart.attacks, ds_list_find_index(objHeart.attacks, self))	
 	ds_list_delete(objHeart.attacks, 0)	
+	
+	audio_play_sound(snd_hit, 2, 0)
+	if ds_list_size(objHeart.attacks) + objHeart.shots = 1 
+	{
+		//audio_play_sound(snd_saber3, 2, 0)
+	}
 }

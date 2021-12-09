@@ -24,8 +24,10 @@ if animDodge = 2 and x < startPos
 }
 else if animDodge = 2
 {
+	show_debug_message("dodge animation end")
 	animDodge = 0
 	idle = true
+	startEnemyTurn()
 }
 
 if idle 
@@ -72,7 +74,20 @@ else
 
 if startAtt
 {
-	endEnemyTurn()	
+	for(var i = 0; i < 8; i++)
+	{
+		with(instance_create_layer(objHeart.x + lengthdir_x(300, i*45), objHeart.y + lengthdir_y(300, i*45), "FightInstances", objSansGBlast))
+		{
+			direction = i*45
+			//if direction % 90 = 0
+			//{
+			//	x = objHeart.x + lengthdir_x(350, i*45)
+			//}
+			image_angle = direction + 270
+		}
+	}
+	startAtt = false
+	//endEnemyTurn()	
 }
 
 

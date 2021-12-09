@@ -1,4 +1,12 @@
 randomize()
+if yourTurn
+{
+	objDrawFightBox.visible = false
+}
+else
+{
+	objDrawFightBox.visible = true
+}
 
 if shownHp != friskHp and alarm[5] <= 0
 {
@@ -79,7 +87,7 @@ Stay determined..."]
 			alarm[1] = 1	
 		}
 	
-		if keyboard_check_pressed(vk_space)
+		if keyboard_check_pressed(vk_space) or keyboard_check_pressed(ord("X")) or keyboard_check_pressed(ord("Z"))
 		{
 			if textCur < string_length(menuDial[textNum]) - 1 
 			{
@@ -114,36 +122,45 @@ else
 		{
 			if keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord("A"))
 			{
-				menuOption = clamp(menuOption-1, 0, 3)	
+				menuOption = clamp(menuOption-1, 0, 3)
+				audio_play_sound(snd_select, 2, 0)
 			}
 			else if keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord("D"))
 			{
-				menuOption = clamp(menuOption+1, 0, 3)	
+				menuOption = clamp(menuOption+1, 0, 3)
+				audio_play_sound(snd_select, 2, 0)
 			}
 		}
-		else if options!= -1
+		else if options != -1
 		{
+			var tempOptions = optionsOption
 			if keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord("A"))
 			{
-				optionsOption = clamp(optionsOption-1, 0, optionsSize-1)	
+				optionsOption--	
 			}
 			else if keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord("D"))
 			{
-				optionsOption = clamp(optionsOption+1, 0, optionsSize-1)	
+				optionsOption++	
 			}
 			else if keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W"))
 			{
-				optionsOption = clamp(optionsOption-2, 0, optionsSize-1)	
+				optionsOption-=2	
 			}
 			else if keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S"))
 			{
-				optionsOption = clamp(optionsOption+2, 0, optionsSize-1)	
+				optionsOption+=2	
+			}
+			
+			if tempOptions != optionsOption
+			{
+				optionsOption = clamp(optionsOption, 0, optionsSize-1)
+				audio_play_sound(snd_select, 2, 0)
 			}
 			x = 250 + 550*(optionsOption%2)
 			y = 630 + 100*floor(optionsOption/2)
 		}
 	
-		if keyboard_check_pressed(vk_space) or keyboard_check_pressed(ord("X"))
+		if keyboard_check_pressed(vk_space) or keyboard_check_pressed(ord("Z"))
 		{
 			if onText
 			{
@@ -211,6 +228,7 @@ else
 						break;
 				}
 				menuOption = -1
+				audio_play_sound(snd_select, 2, 0)
 			}
 			else if ds_list_size(attacks) > 0
 			{
@@ -234,6 +252,7 @@ else
 					inventory[optionsOption, 1] = 0
 					inventory[optionsOption, 2] = 0
 					usingItem = false
+					audio_play_sound(snd_heal, 2, 0)
 				}
 				else
 				{
@@ -246,8 +265,19 @@ else
 				//menuOption = 0
 				//startEnemyTurn()
 			
-			
+				audio_play_sound(snd_select, 2, 0)
 			}
+		}
+		
+		if keyboard_check_pressed(ord("X")) and options != -1 
+		{
+			onMenu = true
+			menuOption = usingItem + 1
+			options = -1
+			optionsOption = -1
+			usingItem = false
+			displayText = true
+			audio_play_sound(snd_select, 2, 0)
 		}
 	
 		if menuDial != 0

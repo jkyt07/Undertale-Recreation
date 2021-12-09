@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"bca7d3f0-6f2a-4fb4-89ca-e6ec1cce2152","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Sans Battle",
     "path": "folders/Sprites/Fight/Sans Battle.yy",

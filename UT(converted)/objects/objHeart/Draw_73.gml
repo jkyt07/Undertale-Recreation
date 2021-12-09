@@ -23,19 +23,19 @@ if !alive
 	exit;
 }
 
-if !yourTurn
-{
-	draw_rectangle_color(0, 899, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, 0)
-	draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), 566, c_black, c_black, c_black, c_black, 0)
-	draw_rectangle_color(midCam - 380, 530, midCam - 247, 920, c_black, c_black, c_black, c_black, 0)
-	draw_rectangle_color(midCam + 252, 530, midCam + 350, 920, c_black, c_black, c_black, c_black, 0)
+//if !yourTurn
+//{
+//	draw_rectangle_color(0, 899, camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]), c_black, c_black, c_black, c_black, 0)
+//	draw_rectangle_color(0, 0, camera_get_view_width(view_camera[0]), 566, c_black, c_black, c_black, c_black, 0)
+//	draw_rectangle_color(midCam - 380, 530, midCam - 247, 920, c_black, c_black, c_black, c_black, 0)
+//	draw_rectangle_color(midCam + 252, 530, midCam + 350, 920, c_black, c_black, c_black, c_black, 0)
 	
 	
-	draw_rectangle_color(midCam - 248, 567, midCam + 251, 577, c_white, c_white, c_white, c_white, 0)
-	draw_rectangle_color(midCam - 248, 567, midCam - 238, 898, c_white, c_white, c_white, c_white, 0)
-	draw_rectangle_color(midCam + 241, 567, midCam + 251, 898, c_white, c_white, c_white, c_white, 0)
-	draw_rectangle_color(midCam - 248, 888, midCam + 251, 898, c_white, c_white, c_white, c_white, 0)
-}
+//	draw_rectangle_color(midCam - 248, 567, midCam + 251, 577, c_white, c_white, c_white, c_white, 0)
+//	draw_rectangle_color(midCam - 248, 567, midCam - 238, 898, c_white, c_white, c_white, c_white, 0)
+//	draw_rectangle_color(midCam + 241, 567, midCam + 251, 898, c_white, c_white, c_white, c_white, 0)
+//	draw_rectangle_color(midCam - 248, 888, midCam + 251, 898, c_white, c_white, c_white, c_white, 0)
+//}
 
 if enemy.grid != 0
 draw_sprite_ext(sprBattleGrid, 0, midCam, 290, 2.8, 2.2, 0, c_white, 1)	
@@ -96,3 +96,5 @@ if viewable
 
 draw_text(15, 980, string(instance_number(objCut)))
 //draw_text(1650, 40, string(enemy.x))
+
+draw_text(10, 135, string(yourTurn) + " " + string(enemy.startAtt))

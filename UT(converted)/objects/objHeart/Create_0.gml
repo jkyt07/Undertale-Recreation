@@ -45,7 +45,10 @@ menuDial = enemy.startDial
 textNum = 0
 textCur = 0
 
+globalvar midCam;
 midCam = camera_get_view_width(view_camera[0]) / 2
 
 audio_pause_sound(mus_Waterfall)
 audio_play_sound(enemy.sound, 2, 1)
+
+instance_create_layer(0,0, "FightBox", objDrawFightBox)

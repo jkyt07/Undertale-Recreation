@@ -225,6 +225,7 @@ else
 						enemy.hp-=turnDmg
 						enemy.image_index = 2
 						instance_create_depth(enemy.x, enemy.y, -10000, objCut)
+						audio_play_sound(snd_laz, 1, 0)
 						break;
 				}
 				menuOption = -1

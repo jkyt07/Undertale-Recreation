@@ -220,6 +220,7 @@ else if !fightStart
 			{
 				textNum++
 				textCur = 0
+				alarm[0] = -1
 			}
 			else
 			{

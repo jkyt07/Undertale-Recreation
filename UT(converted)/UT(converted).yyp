@@ -116,6 +116,7 @@
     {"id":{"name":"objWaterBWF1","path":"objects/objWaterBWF1/objWaterBWF1.yy",},"order":4,},
     {"id":{"name":"objWaterBWF2","path":"objects/objWaterBWF2/objWaterBWF2.yy",},"order":5,},
     {"id":{"name":"objWaterBWF3","path":"objects/objWaterBWF3/objWaterBWF3.yy",},"order":6,},
+    {"id":{"name":"snd_laz","path":"sounds/snd_laz/snd_laz.yy",},"order":22,},
     {"id":{"name":"objSolid","path":"objects/objSolid/objSolid.yy",},"order":3,},
     {"id":{"name":"objInteractable","path":"objects/objInteractable/objInteractable.yy",},"order":8,},
     {"id":{"name":"objDoor","path":"objects/objDoor/objDoor.yy",},"order":4,},

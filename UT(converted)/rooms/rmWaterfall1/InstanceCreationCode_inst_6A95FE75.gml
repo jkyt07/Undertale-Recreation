@@ -1,5 +1,5 @@
 dialogue = [
-@"Something about echo flowers"]
+@"* Something about echo flowers"]
 
 altDialogue = [
 @"* Never trust a flower...

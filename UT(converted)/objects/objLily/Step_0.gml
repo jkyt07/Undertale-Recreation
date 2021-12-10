@@ -48,7 +48,7 @@ if carried
 	image_xscale = frisk.image_xscale
 	image_yscale = frisk.image_yscale
 	direction = frisk.dir*90
-	if place_meeting(x + lengthdir_x(79, direction), (round(frisk.y / 80) * 80 + 40) + lengthdir_y(79, direction), objWater) and (keyboard_check_pressed(vk_space) or keyboard_check(ord("X")))
+	if place_meeting(x + lengthdir_x(79, direction), (round(frisk.y / 80) * 80 + 40) + lengthdir_y(79, direction), objWater) and (keyboard_check_pressed(vk_space) or keyboard_check(ord("Z")))
 	{
 		placed = true
 		carried = false
@@ -56,6 +56,7 @@ if carried
 		x+=lengthdir_x(79, direction)
 		speed = 4
 		layer = layer_get_id("InstancesA")
+		audio_play_sound(snd_select, 2, 0);
 	}
 }
 

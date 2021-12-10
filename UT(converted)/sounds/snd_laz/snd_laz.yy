@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_damage",
-  "duration": 0.450884,
+  "soundFile": "snd_laz.wav",
+  "duration": 0.55059,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_damage",
+  "name": "snd_laz",
   "tags": [],
   "resourceType": "GMSound",
 }
